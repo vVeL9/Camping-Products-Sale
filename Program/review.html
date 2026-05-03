@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="header">
+        <a href="index.html"><img src="./img/logo.png" class="logo" alt="logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a class="active" href="review.html">Review</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                 <li><a href="account.html"><i class="fa-solid fa-user"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section id="review-header">
+        <h2>#CustomerReviews</h2>
+        <p>Real stories from our camping community</p>
+    </section>
+
+    <!-- Rating Summary Section -->
+    <div class="rating-summary">
+        <div class="average-rating">
+            <div class="big-rating">4.8</div>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-alt"></i>
+            </div>
+            <p>Based on 1,247 reviews</p>
+        </div>
+        <div class="rating-bars">
+            <div class="rating-bar-item">
+                <span class="star-label">5 Star</span>
+                <div class="bar"><div class="bar-fill" style="width: 78%"></div></div>
+                <span class="percentage">78%</span>
+            </div>
+            <div class="rating-bar-item">
+                <span class="star-label">4 Star</span>
+                <div class="bar"><div class="bar-fill" style="width: 15%"></div></div>
+                <span class="percentage">15%</span>
+            </div>
+            <div class="rating-bar-item">
+                <span class="star-label">3 Star</span>
+                <div class="bar"><div class="bar-fill" style="width: 4%"></div></div>
+                <span class="percentage">4%</span>
+            </div>
+            <div class="rating-bar-item">
+                <span class="star-label">2 Star</span>
+                <div class="bar"><div class="bar-fill" style="width: 2%"></div></div>
+                <span class="percentage">2%</span>
+            </div>
+            <div class="rating-bar-item">
+                <span class="star-label">1 Star</span>
+                <div class="bar"><div class="bar-fill" style="width: 1%"></div></div>
+                <span class="percentage">1%</span>
+            </div>
+        </div>
+        <div>
+            <button class="write-review-btn" id="openModalBtn"><i class="fa-solid fa-pen"></i> Write a Review</button>
+        </div>
+    </div>
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Reviews</button>
+            <button class="filter-btn" data-filter="with-photo">With Photos</button>
+            <button class="filter-btn" data-filter="5-star">5 Star</button>
+            <button class="filter-btn" data-filter="4-star">4 Star</button>
+            <button class="filter-btn" data-filter="3-star">3 Star ↓</button>
+        </div>
+        <select class="sort-select" id="sortSelect">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+            <option value="highest">Highest Rated</option>
+            <option value="lowest">Lowest Rated</option>
+            <option value="helpful">Most Helpful</option>
+        </select>
+    </div>
+
+    <!-- Reviews Container -->
+    <div class="reviews-container" id="reviewsContainer">
+        <!-- Review 1 -->
+        <div class="review-card" data-rating="5" data-date="2026-04-15" data-helpful="124" data-photo="true">
+            <div class="review-header">
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">JD</div>
+                    <div class="reviewer-name">
+                        <h2>John Davidson <span class="verified-badge"><i class="fa-solid fa-check-circle"></i> Verified Buyer</span></h2>
+                        <div class="review-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span class="product-tag"><i class="fa-solid fa-tent"></i> Tent for 8</span>
+                    <span class="review-date">April 15, 2026</span>
+                </div>
+            </div>
+            <div class="review-title">Best camping investment ever!</div>
+            <div class="review-content">
+                This tent changed everything for our family camping trips. The 1-minute setup is NOT an exaggeration - my wife and I had it up in under 2 minutes on our first try. The material is thick and waterproof, we camped through a light rain and stayed completely dry. The star view window is a beautiful touch that the kids love. Highly recommend!
+            </div>
+            <div class="helpful-section">
+                <button class="helpful-btn" data-id="1"><i class="fa-regular fa-thumbs-up"></i> Helpful (<span class="helpful-count">124</span>)</button>
+                <button class="report-btn"><i class="fa-regular fa-flag"></i> Report</button>
+            </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card" data-rating="4" data-date="2026-04-10" data-helpful="87" data-photo="true">
+            <div class="review-header">
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">SR</div>
+                    <div class="reviewer-name">
+                        <h2>Sarah Rodriguez <span class="verified-badge"><i class="fa-solid fa-check-circle"></i> Verified Buyer</span></h2>
+                        <div class="review-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span class="product-tag"><i class="fa-solid fa-bag-shopping"></i> 65L Hiking Backpack</span>
+                    <span class="review-date">April 10, 2026</span>
+                </div>
+            </div>
+            <div class="review-title">Super comfortable for long hikes</div>
+            <div class="review-content">
+                Took this on a 3-day trek and it performed beautifully. The breathable mesh back kept me from getting too sweaty, and the waist straps really distribute the weight well. The only minor complaint is that the water bottle pockets are a bit tight. Otherwise, excellent quality for the price!
+            </div>
+            <div class="helpful-section">
+                <button class="helpful-btn" data-id="2"><i class="fa-regular fa-thumbs-up"></i> Helpful (<span class="helpful-count">87</span>)</button>
+                <button class="report-btn"><i class="fa-regular fa-flag"></i> Report</button>
+            </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card" data-rating="5" data-date="2026-04-05" data-helpful="203" data-photo="true">
+            <div class="review-header">
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">MT</div>
+                    <div class="reviewer-name">
+                        <h2>Michael Thompson <span class="verified-badge"><i class="fa-solid fa-check-circle"></i> Verified Buyer</span></h2>
+                        <div class="review-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span class="product-tag"><i class="fa-solid fa-fire"></i> Camping Stove</span>
+                    <span class="review-date">April 5, 2026</span>
+                </div>
+            </div>
+            <div class="review-title">Perfect for family camping meals</div>
+            <div class="review-content">
+                This dual-burner stove is a game changer! Boils water in minutes, and the flame control is very precise. We made pancakes, eggs, and coffee for 6 people in under 30 minutes. The carry case is sturdy and makes transport easy. Absolutely worth every penny!
+            </div>
+            <div class="helpful-section">
+                <button class="helpful-btn" data-id="3"><i class="fa-regular fa-thumbs-up"></i> Helpful (<span class="helpful-count">203</span>)</button>
+                <button class="report-btn"><i class="fa-regular fa-flag"></i> Report</button>
+            </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="review-card" data-rating="5" data-date="2026-03-28" data-helpful="56" data-photo="false">
+            <div class="review-header">
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">EL</div>
+                    <div class="reviewer-name">
+                        <h2>Emma Liu <span class="verified-badge"><i class="fa-solid fa-check-circle"></i> Verified Buyer</span></h2>
+                        <div class="review-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span class="product-tag"><i class="fa-solid fa-bed"></i> Ultra-Warm Sleeping Bag</span>
+                    <span class="review-date">March 28, 2026</span>
+                </div>
+            </div>
+            <div class="review-title">Kept me warm in freezing temps!</div>
+            <div class="review-content">
+                I was skeptical about the -10°C rating, but this sleeping bag kept me perfectly warm on a 20°F night. It's roomy enough to move around and the material feels premium. The compression sack makes it easy to pack down small. Will be buying one for my partner too!
+            </div>
+            <div class="helpful-section">
+                <button class="helpful-btn" data-id="4"><i class="fa-regular fa-thumbs-up"></i> Helpful (<span class="helpful-count">56</span>)</button>
+                <button class="report-btn"><i class="fa-regular fa-flag"></i> Report</button>
+            </div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="review-card" data-rating="4" data-date="2026-03-20" data-helpful="112" data-photo="true">
+            <div class="review-header">
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">CP</div>
+                    <div class="reviewer-name">
+                        <h2>Chris Parker <span class="verified-badge"><i class="fa-solid fa-check-circle"></i> Verified Buyer</span></h2>
+                        <div class="review-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span class="product-tag"><i class="fa-solid fa-lightbulb"></i> LED Lantern</span>
+                    <span class="review-date">March 20, 2026</span>
+                </div>
+            </div>
+            <div class="review-title">Bright and versatile</div>
+            <div class="review-content">
+                This lantern lights up our entire campsite! The 6 light modes are actually useful - the red light is perfect for night vision. Battery life is impressive, lasted our whole 4-day trip on one set. Would be 5 stars if it came with a rechargeable battery option.
+            </div>
+            <div class="helpful-section">
+                <button class="helpful-btn" data-id="5"><i class="fa-regular fa-thumbs-up"></i> Helpful (<span class="helpful-count">112</span>)</button>
+                <button class="report-btn"><i class="fa-regular fa-flag"></i> Report</button>
+            </div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="review-card" data-rating="5" data-date="2026-03-15" data-helpful="178" data-photo="true">
+            <div class="review-header">
+                <div class="reviewer-info">
+                    <div class="reviewer-avatar">JW</div>
+                    <div class="reviewer-name">
+                        <h2>Jessica Williams <span class="verified-badge"><i class="fa-solid fa-check-circle"></i> Verified Buyer</span></h2>
+                        <div class="review-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span class="product-tag"><i class="fa-solid fa-tent"></i> Tent for 12</span>
+                    <span class="review-date">March 15, 2026</span>
+                </div>
+            </div>
+            <div class="review-title">Spacious and easy to set up!</div>
+            <div class="review-content">
+                We're a family of 5 plus a dog, and this tent gives us all plenty of room. The color-coded poles made setup incredibly easy - even our 10-year-old helped. We've used it in both hot and cold weather, and the ventilation is excellent. Highly recommend for large families!
+            </div>
+            <div class="helpful-section">
+                <button class="helpful-btn" data-id="6"><i class="fa-regular fa-thumbs-up"></i> Helpful (<span class="helpful-count">178</span>)</button>
+                <button class="report-btn"><i class="fa-regular fa-flag"></i> Report</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load More Button -->
+    <div class="load-more">
+        <button class="load-more-btn" id="loadMoreBtn">Load More Reviews</button>
+    </div>
+
+    <!-- Write Review Modal -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Write a Review</h3>
+            <form id="reviewForm">
+                <label>Your Name *</label>
+                <input type="text" id="reviewerName" placeholder="Enter your name" required>
+                
+                <label>Select Product *</label>
+                <select id="productSelect" required>
+                    <option value="">-- Select Product --</option>
+                    <option value="Tent for 6">Tent for 6</option>
+                    <option value="Tent for 8">Tent for 8</option>
+                    <option value="Tent for 10">Tent for 10</option>
+                    <option value="Tent for 12">Tent for 12</option>
+                    <option value="Ultra-Warm Sleeping Bag">Ultra-Warm Sleeping Bag</option>
+                    <option value="Camping Stove">Camping Stove</option>
+                    <option value="65L Hiking Backpack">65L Hiking Backpack</option>
+                    <option value="LED Lantern">LED Lantern</option>
+                </select>
+
+                <label>Rating *</label>
+                <div class="rating-input" id="ratingInput">
+                    <i class="fa-regular fa-star" data-value="1"></i>
+                    <i class="fa-regular fa-star" data-value="2"></i>
+                    <i class="fa-regular fa-star" data-value="3"></i>
+                    <i class="fa-regular fa-star" data-value="4"></i>
+                    <i class="fa-regular fa-star" data-value="5"></i>
+                </div>
+              
+
+                <label>Review Title *</label>
+                <input type="text" id="reviewTitle" placeholder="Summarize your experience" required>
+
+                <label>Your Review *</label>
+                <textarea id="reviewText" placeholder="Share your experience with this product..." required></textarea>
+
+                <div class="modal-buttons">
+                    <button type="button" class="cancel-review-btn" id="cancelModalBtn">Cancel</button>
+                    <button type="submit" class="submit-review-btn">Submit Review</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section id="newsletter">
+        <div class="newstext">
+            <h4>Sign Up For Newsletter</h4>
+            <p>Get updates about our latest products and <span>special offers</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button>Sign Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col1">
+            <h4 style="font-weight: 700;">Contact</h4>
+            <p><span style="font-weight: 700;">Address:</span> 123 Yorkshire street, Yangon</p>
+            <p><span style="font-weight: 700;">Phone:</span> +01 234 567 890</p>
+            <p><span style="font-weight: 700;">Hours:</span> 9:00 - 18:00, Mon - Sat</p>
+            <div class="follow">
+                <h4 style="font-weight: 700;">Follow us</h4>
+                <div class="icon">
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://x.com/"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4 style="font-weight: 700;">About</h4>
+            <a href="about.html">About us</a>
+            <a href="membership.html">Membership information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="contact.html">Contact us</a>
+        </div>
+        <div class="col">
+            <h4 style="font-weight: 700;">My account</h4>
+            <a href="account.html">Sign in</a>
+            <a href="cart.html">View Cart</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="copyright">
+            <p>© 2026 Camping Product Sale. All Rights Reserved</p>
+        </div>
+    </footer>
+
+ 
+</body>
+
+</html>
